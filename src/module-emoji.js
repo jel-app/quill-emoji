@@ -64,7 +64,7 @@ class ShortNameEmoji extends Module {
       this.quill.deleteText(range.index, range.length, Quill.sources.USER);
     }
 
-    this.quill.insertText(range.index, ":", "emoji-shortname", Quill.sources.USER);
+    this.quill.insertText(range.index, ":", Quill.sources.USER);
     const atSignBounds = this.quill.getBounds(range.index);
     this.quill.setSelection(range.index + 1, Quill.sources.SILENT);
 
