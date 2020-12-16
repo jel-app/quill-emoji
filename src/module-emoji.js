@@ -135,7 +135,7 @@ class ShortNameEmoji extends Module {
     try {
       if (event) {
         if (event.key === "Enter" || event.keyCode === 13) {
-          this.close(emojis[0], 1);
+          this.close(emojis[0]);
           this.container.style.display = "none";
           return;
         }
