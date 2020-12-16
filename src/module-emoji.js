@@ -146,7 +146,7 @@ class ShortNameEmoji extends Module {
           return;
         }
       }
-      if (event) {return;}
+      if (event instanceof KeyboardEvent) {return;}
     } catch(e) { console.warn(e); }
 
     while (this.container.firstChild){
