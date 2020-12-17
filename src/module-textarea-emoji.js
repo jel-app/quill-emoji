@@ -21,10 +21,12 @@ class TextAreaEmoji extends Module {
     checkEmojiBoxExist(e){
         let elementExists = this.quill.container.querySelector(".textarea-emoji");
         if (elementExists) {
+            this.container.classList.remove('active');
             elementExists.remove();
             this.quill.focus();
         }
         else{
+            this.container.classList.add('active');
             let ele_emoji_area = document.createElement('div');
             ele_emoji_area.classList.add('textarea-emoji');
             this.quill.container.appendChild(ele_emoji_area);
@@ -143,7 +145,7 @@ class TextAreaEmoji extends Module {
 }
 
 TextAreaEmoji.DEFAULTS = {
-  buttonIcon: '<svg viewbox="0 0 18 18"><circle class="ql-fill" cx="7" cy="7" r="1"></circle><circle class="ql-fill" cx="11" cy="7" r="1"></circle><path class="ql-stroke" d="M7,10a2,2,0,0,0,4,0H7Z"></path><circle class="ql-stroke" cx="9" cy="9" r="6"></circle></svg>'
+  buttonIcon: '<svg viewbox="0 0 18 18"><circle fill="currentColor" cx="7" cy="7" r="1"></circle><circle fill="currentColor" cx="11" cy="7" r="1"></circle><path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" d="M7,10a2,2,0,0,0,4,0H7Z"></path><circle fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" cx="9" cy="9" r="6"></circle></svg>'
 }
 
 function fn_updateRange(quill){

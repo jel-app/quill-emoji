@@ -115,6 +115,7 @@
   width: 29px;
   height: 29px;
   margin: 2px;
+  line-height: 26px;
 }
 .ap.bem:hover {
   background-color: var(--canvas-overlay-item-hover-background-color);
@@ -210,6 +211,16 @@ button.ql-table[value="append-col"]::after { content: "COLS+"; }
   top:12px;
   cursor: pointer;
   pointer-events: auto;
+  color: rgb(205, 205, 205);
+}
+.textarea-emoji-control:hover{
+  color: var(--panel-item-hover-background-color);
+}
+.textarea-emoji-control.active{
+  color: var(--panel-item-active-background-color);
+}
+.textarea-emoji-control.active:hover{
+  color: var(--panel-item-active-background-color);
 }
 .textarea-emoji {
   position: absolute;
