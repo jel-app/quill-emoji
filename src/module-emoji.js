@@ -135,7 +135,7 @@ class ShortNameEmoji extends Module {
     try {
       if (event) {
         if (event.key === "Enter" || event.keyCode === 13) {
-          this.close(emojis[0], 1);
+          this.close(emojis[0], true);
           this.container.style.display = "none";
           return;
         }
@@ -228,14 +228,19 @@ class ShortNameEmoji extends Module {
     buttons[0].classList.add('emoji-active');
   }
 
-  close(value, trailingDelete = 0) {
+  close(value, trailingDelete = false) {
     this.quill.enable();
     this.container.style.display = "none";
     while (this.container.firstChild) this.container.removeChild(this.container.firstChild);
     this.quill.off('selection-change', this.onSelectionChange);
     this.quill.off('text-change', this.onTextChange);
     if (value) {
-      this.quill.deleteText(this.atIndex, this.query.length + 1 + trailingDelete, Quill.sources.USER);
+      this.quill.deleteText(this.atIndex, this.query.length + 1, Quill.sources.USER);
+
+      if (trailingDelete) {
+        this.quill.deleteText(this.atIndex, 1, Quill.sources.USER);
+      }
+
       this.quill.insertEmbed(this.atIndex, 'emoji', value, Quill.sources.USER);
       setTimeout(() => this.quill.setSelection(this.atIndex + 1), 0);
     }
