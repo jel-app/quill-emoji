@@ -19,6 +19,7 @@ class TextAreaEmoji extends Module {
     }
 
     checkEmojiBoxExist(e){
+        e.preventDefault();
         let elementExists = this.quill.container.querySelector(".textarea-emoji");
         if (elementExists) {
             this.container.classList.remove('active');
