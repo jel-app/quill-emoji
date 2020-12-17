@@ -237,6 +237,10 @@ class ShortNameEmoji extends Module {
     if (value) {
       this.quill.deleteText(this.atIndex, this.query.length + 1, Quill.sources.USER);
 
+      // We delete one past the end here, this handles the case where the end of the document
+      // is an emoji and the document has attributes. (For example, a header with a trailing
+      // emoji.) If this isn't done, then the un-attributed newline is retained, not the attributed
+      // newline.
       if (trailingDelete) {
         this.quill.deleteText(this.atIndex + 1, 1, Quill.sources.USER);
       }
