@@ -77,7 +77,15 @@ class ShortNameEmoji extends Module {
       this.container.style.left = atSignBounds.left + "px";
     }
 
-    this.container.style.top = atSignBounds.top + atSignBounds.height + 12 + "px";
+    let windowHeight = window.innerHeight;
+
+    if (atSignBounds.top > windowHeight/4) {
+      this.container.style.bottom = (this.quill.container.offsetHeight - atSignBounds.top) + 12 + "px";
+      this.container.style.top = "auto";
+    } else {
+      this.container.style.top = atSignBounds.top + atSignBounds.height + 12 + "px";
+      this.container.style.bottom = "auto";
+    }
     this.open = true;
 
     this.quill.on('text-change', this.onTextChange);
