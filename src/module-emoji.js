@@ -77,7 +77,7 @@ class ShortNameEmoji extends Module {
       this.container.style.left = atSignBounds.left + "px";
     }
 
-    this.container.style.top = atSignBounds.top + atSignBounds.height + "px";
+    this.container.style.top = atSignBounds.top + atSignBounds.height + 12 + "px";
     this.open = true;
 
     this.quill.on('text-change', this.onTextChange);
