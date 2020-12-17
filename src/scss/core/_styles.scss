@@ -125,10 +125,22 @@
   height: 29px;
   margin: 2px;
   line-height: 26px;
+  display: inline;
+  appearance: none;
+  background: transparent;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline-style: none;
+  border: 0;
+  pointer-events: auto;
+  border-radius: 2px;
 }
 .ap.bem:hover {
   background-color: var(--canvas-overlay-item-hover-background-color);
-  border-radius: 2px;
+}
+.ap.bem:active {
+  background-color: var(--canvas-overlay-item-active-background-color);
+  opacity: 0.6;
 }
 .bem {
     font-size: 24px;
@@ -150,12 +162,17 @@
     width: 30px;
     height: 100%;
     min-height: 30px;
-    cursor: pointer;
+    appearance: none;
+    background: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    outline-style: none;
+    border: 0;
     pointer-events: auto;
 }
 .tab-toolbar {
     background-color: var(--panel-background-color);
-    padding: 4px 4px 0;
+    padding: 6px 4px 2px 4px;
     border-radius: 6px;
     color: blue;
 }
@@ -168,14 +185,14 @@
 .tab-toolbar {
   border-radius: 4px;
 }
-.tab-toolbar li {
+.tab-toolbar button {
   margin: 0 2px;
   border-radius: 2px;
 }
 .tab-toolbar .active {
   background-color: var(--panel-item-active-background-color);
 }
-.tab-toolbar li:hover{
+.tab-toolbar button:hover{
   background-color: var(--panel-item-hover-background-color);
 }
 .tab-toolbar .active:hover {
@@ -189,7 +206,7 @@
     justify-content: center;
     max-height: 220px;
     overflow-y: scroll;
-    padding: 12px 4px;
+    padding: 4px 4px;
 
 }
 
@@ -221,6 +238,12 @@ button.ql-table[value="append-col"]::after { content: "COLS+"; }
   cursor: pointer;
   pointer-events: auto;
   color: rgb(205, 205, 205);
+  appearance: none;
+  background: transparent;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline-style: none;
+  border: 0;
 }
 .textarea-emoji-control:hover{
   color: var(--panel-item-hover-background-color);

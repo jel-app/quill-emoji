@@ -10,13 +10,12 @@ class TextAreaEmoji extends Module {
         super(quill, options);
 
         this.quill = quill;
-        this.container  = document.createElement('div');
+        this.container  = document.createElement('button');
         this.container.classList.add('textarea-emoji-control');
         this.container.style.position   = "absolute";
         this.container.innerHTML = options.buttonIcon;
         this.quill.container.appendChild(this.container);
         this.container.addEventListener('click', this.checkEmojiBoxExist.bind(this),false);
-        this.container.addEventListener('mousedown', e => e.preventDefault());
     }
 
     checkEmojiBoxExist(e){
@@ -54,7 +53,7 @@ class TextAreaEmoji extends Module {
             ele_emoji_area.appendChild(panel);
             let innerQuill = this.quill;
             emojiType.map(emojiType => {
-                let tabElement = document.createElement('li');
+                let tabElement = document.createElement('button');
                 tabElement.classList.add('emoji-tab');
                 tabElement.classList.add('filter-'+emojiType.name);
                 let tabValue = emojiType.content;
@@ -113,7 +112,7 @@ class TextAreaEmoji extends Module {
         let range = fn_updateRange(quill);
 
         result.map(emoji => {
-            let span = document.createElement('span');
+            let span = document.createElement('button');
             let t = document.createTextNode(emoji.shortname);
             span.appendChild(t);
             span.classList.add('bem');
