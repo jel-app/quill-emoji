@@ -238,7 +238,7 @@ class ShortNameEmoji extends Module {
       this.quill.deleteText(this.atIndex, this.query.length + 1, Quill.sources.USER);
 
       if (trailingDelete) {
-        this.quill.deleteText(this.atIndex, 1, Quill.sources.USER);
+        this.quill.deleteText(this.atIndex + 1, 1, Quill.sources.USER);
       }
 
       this.quill.insertEmbed(this.atIndex, 'emoji', value, Quill.sources.USER);
