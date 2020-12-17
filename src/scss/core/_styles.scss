@@ -112,8 +112,13 @@
     border: 1px solid rgba(0,0,0,.15);
 }
 .ap.bem {
-  width: 30px;
-  height: 30px;
+  width: 29px;
+  height: 29px;
+  margin: 2px;
+}
+.ap.bem:hover {
+  background-color: var(--canvas-overlay-item-hover-background-color);
+  border-radius: 2px;
 }
 .bem {
     font-size: 24px;
@@ -150,9 +155,21 @@
     display:flex;
     margin-bottom: 4px;
 }
+.tab-toolbar {
+  border-radius: 4px;
+}
+.tab-toolbar li {
+  margin: 0 2px;
+  border-radius: 2px;
+}
 .tab-toolbar .active {
   background-color: var(--panel-item-active-background-color);
-  border-radius: 4px;
+}
+.tab-toolbar li:hover{
+  background-color: var(--panel-item-hover-background-color);
+}
+.tab-toolbar .active:hover {
+  background-color: var(--panel-item-active-background-color);
 }
 .tab-panel {
     background: var(--text-input-background-color);
@@ -162,8 +179,7 @@
     justify-content: center;
     max-height: 220px;
     overflow-y: scroll;
-    padding: 2px;
-    padding: 12px 0;
+    padding: 12px 4px;
 
 }
 
@@ -199,7 +215,7 @@ button.ql-table[value="append-col"]::after { content: "COLS+"; }
   position: absolute;
   right:12px;
   top:48px;
-  max-width: 250px;
+  max-width: 280px;
   z-index: 999;
   border-radius: 6px;
   color: var(--panel-text-color);
