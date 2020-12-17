@@ -16,10 +16,10 @@ class TextAreaEmoji extends Module {
         this.container.innerHTML = options.buttonIcon;
         this.quill.container.appendChild(this.container);
         this.container.addEventListener('click', this.checkEmojiBoxExist.bind(this),false);
+        this.container.addEventListener('mousedown', e => e.preventDefault());
     }
 
     checkEmojiBoxExist(e){
-        e.preventDefault();
         let elementExists = this.quill.container.querySelector(".textarea-emoji");
         if (elementExists) {
             this.container.classList.remove('active');
