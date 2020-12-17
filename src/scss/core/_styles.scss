@@ -77,7 +77,7 @@
     outline-style: none;
     border: 0;
     border-radius: 4px;
-    color: var(--canvas-overlay-text-color);
+    color: var(--panel-text-color);
     font-weight: var(--canvas-overlay-item-text-weight);
     font-size: var(--canvas-overlay-text-size);
     line-height: calc(var(--canvas-overlay-text-size) + 2px);
@@ -90,13 +90,16 @@
 }
 
 .emoji_completions > li > button:hover {
-            background-color: var(--panel-item-active-background-color);
+    background-color: var(--panel-item-active-background-color);
+    color: var(--panel-item-active-text-color);
 }
 .emoji_completions > li > button:focus {
             background-color: var(--panel-item-active-background-color);
+    color: var(--panel-item-active-text-color);
 }
 .emoji_completions>li>button.emoji-active{
             background-color: var(--panel-item-active-background-color);
+    color: var(--panel-item-active-text-color);
 }
 .emoji_completions > li > button > .matched {
             font-weight: bold;
