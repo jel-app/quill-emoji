@@ -198,12 +198,15 @@ button.ql-table[value="append-col"]::after { content: "COLS+"; }
 .textarea-emoji-control{
   width: 25px;
   height: 25px;
-  right:4px;
-  top:10px;
+  right:12px;
+  top:12px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 #textarea-emoji {
   position: absolute;
-  right:0px;
+  right:12px;
+  top:48px;
   max-width: 250px;
   z-index: 999;
   border: 1px solid #66afe9;
