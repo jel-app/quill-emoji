@@ -135,7 +135,6 @@
   -webkit-appearance: none;
   outline-style: none;
   border: 0;
-  pointer-events: auto;
   border-radius: 2px;
 }
 .ap.bem:hover {
@@ -152,7 +151,6 @@
     text-align: center;
     cursor: pointer;
     margin:2px;
-    pointer-events: auto;
 }
 .tab-filters {
     width: 210px;
@@ -171,7 +169,6 @@
     -webkit-appearance: none;
     outline-style: none;
     border: 0;
-    pointer-events: auto;
 }
 .tab-toolbar {
     background-color: var(--panel-background-color);
@@ -230,7 +227,6 @@ button.ql-table[value="append-col"]::after { content: "COLS+"; }
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: auto;
 }
 
 .textarea-emoji-control{
@@ -239,7 +235,6 @@ button.ql-table[value="append-col"]::after { content: "COLS+"; }
   right:12px;
   top:12px;
   cursor: pointer;
-  pointer-events: auto;
   color: rgb(205, 205, 205);
   appearance: none;
   background: transparent;
